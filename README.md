@@ -1,6 +1,11 @@
 # Sample Cloud Configuration YAML file for Container Linux by CoreOS.
 
-This "cloud-config.yml" file contains only the basics as a template usage.
+This "cloud-config.yml" file is my template which only contains the basics.
 
-- [cloud-config.yml](docs/cloud-config.yml)
+- Source: [cloud-config.yml](cloud-config.yml)
 
+- Download: https://keinos.github.io/CoreOS_CloudConfig/cloud-config.yml
+
+```
+$ curl -O https://keinos.github.io/CoreOS_CloudConfig/cloud-config.yml
+```
