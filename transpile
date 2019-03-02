@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Transpile Container Linux Config (cloud-config.yml) to Ignition config (ignition.json)
+
+echo -n '- Check if config transpiler is installed ... '
+which ct > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo 'NG'
+  echo 'Config transpiler must be installed. Install: $ brew install coreos-ct'
+  exit $LINENO
+fi
+echo 'OK'
+
+ct --platform=vagrant-virtualbox < cloud-config.yml > ignition.json
+
